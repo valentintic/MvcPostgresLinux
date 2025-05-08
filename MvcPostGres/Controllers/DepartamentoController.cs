@@ -77,7 +77,7 @@ namespace MvcPostGres.Controllers
             }
             return View(departamento);
         }
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
