@@ -1,0 +1,41 @@
+﻿@model MvcPostGres.Models.Departamento
+
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-primary text-white">
+        <h2 class="my-2"><i class="bi bi-plus-circle"></i> Crear Nuevo Departamento</h2>
+    </div>
+    <div class="card-body">
+        <form asp-action="Create" method="post">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Id" class="form-label fw-bold"></label>
+                    <input asp-for="Id" class="form-control" placeholder="Identificador" />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Nombre" class="form-label fw-bold"></label>
+                    <input asp-for="Nombre" class="form-control" placeholder="Nombre del departamento" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label asp-for="Localidad" class="form-label fw-bold"></label>
+                    <input asp-for="Localidad" class="form-control" placeholder="Ubicación del departamento" />
+                    <span asp-validation-for="Localidad" class="text-danger"></span>
+                </div>
+            </div>
+            <hr class="my-4" />
+            <div class="d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left"></i> Volver
+                </a>
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-save"></i> Guardar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

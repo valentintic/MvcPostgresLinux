@@ -1,0 +1,18 @@
+﻿@model MvcPostGres.Models.Departamento
+
+<h1>Detalles del Departamento</h1>
+
+<div>
+    <h4>Departamento</h4>
+    <dl class="row">
+        <dt class="col-sm-2">Id</dt>
+        <dd class="col-sm-10">@Model.Id</dd>
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.Nombre</dd>
+        <dt class="col-sm-2">Localidad</dt>
+        <dd class="col-sm-10">@Model.Localidad</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a> |
+<a asp-action="Index" class="btn btn-secondary">Volver</a>
